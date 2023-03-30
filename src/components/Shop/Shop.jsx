@@ -12,12 +12,44 @@ const Shop = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
+    // for set data local storage and get
     useEffect(()=>{
         const storedCart=getShoppingCart();
-    },[])
+        const savedCart=[];
+        // step1
+        for(const id in storedCart){
+            // console log(id)step 2 get product using id
+            const addedProduct=products.find(product=>product.id===id);
+        //   console.log(savedProduct);
+        //   step:3 get quantity of the product
+        if(addedProduct){
+        const quantity=storedCart[id];
+        addedProduct.quantity = quantity
+        // step 4 saved cart a added product add kora
+        savedCart.push(addedProduct);
+        
+        }
+        console.log('added Product',addedProduct);
+    }
+    // step 5 set the cart
+    setCart(savedCart);
+
+    },[products])
 
     const handleAddToCart=(product)=>{
-        const newCart=[...cart,product];
+        let newCart=[];
+        const exists =cart.find(pd=>pd.id === product.id);
+        if (!exists){
+            product.quantity=1;
+            newCart=[...cart,product]
+        }
+        else{
+            exists.quantity=exists.quantity+1;
+            const remaining=cart.filter(pd=>pd.id!==product.id);
+            newCart=[...remaining,exists];
+        }  
+
+        // const newCart=[...cart,product];
         setCart(newCart);
         addToDb(product.id);
     }

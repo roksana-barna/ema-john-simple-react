@@ -77,10 +77,10 @@ const Shop = () => {
                <Cart cart={cart}
                handleClearCart={handleClearCart}
                >
-                <Link to = '/order'></Link>
+                <Link to = "/order">
                 <button className='review-order'>Review Order
                 <FontAwesomeIcon className='' icon={faArrowAltCircleRight} />
-                </button>
+                </button></Link>
                </Cart>
 
                 </div>

@@ -51,10 +51,10 @@ const Orders = () => {
                 
 
               >
-                 <Link to = '/checkout'></Link>
+                 <Link to = '/checkout'>
                 <button className='btn-processed'>Processed CheckOut
                 <FontAwesomeIcon className='' icon={faMoneyBill} />
-                </button>
+                </button></Link>
               </Cart>
 
             </div>

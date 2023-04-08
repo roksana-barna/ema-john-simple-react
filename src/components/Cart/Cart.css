@@ -24,18 +24,3 @@
     /* font-size: 21px; */
 }
 
-.processed-btn {
-    background-color: #FF9900;
-   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: 40px;
-    color: white;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    margin-top:10px;
-    /* font-size: 21px; */
-}

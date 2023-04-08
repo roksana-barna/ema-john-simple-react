@@ -1,9 +1,41 @@
-.cart{
+.cart {
     background-color: bisque;
     padding: 25px;
     position: sticky;
-    top:0;
+    top: 0;
 }
-.cart p{
+
+.cart p {
     font-size: 17px;
+}
+
+.clear-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    background-color: #FF3030;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    /* margin:10px auto; */
+    /* font-size: 21px; */
+}
+
+.processed-btn {
+    background-color: #FF9900;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top:10px;
+    /* font-size: 21px; */
 }
